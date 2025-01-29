@@ -1,0 +1,14 @@
+\subsubsection usage Usage
+\verbatim
+<node name="kinco_control" pkg="kinco_control" type="kinco_control">
+  <param name="max_motor_rpm" type="int" value="300" />
+  <param name="gear_ratio" type="double" value="2.0" />
+  <param name="wheel_diameter" type="double" value="0.2" />
+  <param name="wheels_x_distance" type="double" value="0.0" />
+  <param name="wheels_y_distance" type="double" value="0.1" />
+  <param name="left_motor_rpm" type="int" value="0" />
+  <param name="right_motor_rpm" type="int" value="0" />
+  <param name="lift_motor_rpm" type="int" value="0" />
+</node>
+\endverbatim
+

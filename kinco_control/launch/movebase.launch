@@ -1,0 +1,16 @@
+<launch>
+  <!-- Launch move_base -->
+  <param name="base_global_planner" value="navfn/NavfnROS" />
+  <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS" />
+  <param name="global_costmap/robot_base_frame" value="base_link"/>
+  <param name="local_costmap/robot_base_frame" value="base_link"/>
+  
+  <!-- Global costmap -->
+  <rosparam file="$(find kinco_control)/config/global_costmap_params.yaml" command="load" />
+
+  <!-- Local costmap -->
+  <rosparam file="$(find kinco_control)/config/local_costmap_params.yaml" command="load" />
+
+  <!-- Move base node -->
+  <node pkg="move_base" type="move_base" name="move_base" output="screen"/>
+</launch>

@@ -1,0 +1,9 @@
+<launch>
+    <arg name="param_path" default="$(find kinco_control)/param/kinco_param.yaml"/>
+    <node pkg="kinco_control" type="drive_kinco.py" name="drive_kinco" output="screen">
+        <rosparam command="load" file="$(arg param_path)" />
+    </node>
+    <node pkg="kinco_control" type="odom_dev.py" name="odom_dev" output="screen">
+        <rosparam command="load" file="$(arg param_path)" />
+    </node>
+</launch>

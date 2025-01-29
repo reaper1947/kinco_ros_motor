@@ -1,0 +1,11 @@
+<launch>
+    <!-- Load robot description -->
+    <!-- <param name="robot_description" command="$(find xacro)/xacro $(find kinco_control)/urdf/lidar.urdf"/> -->
+    <param name="robot_description" command="$(find xacro)/xacro $(find kinco_control)/urdf/chassis.urdf"/>
+
+    <!-- Optional: Run joint state publisher -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+    <!-- Optional: Run robot state publisher -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+</launch>

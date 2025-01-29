@@ -1,0 +1,26 @@
+device_name: "kinco"
+can_interface: 'can0'
+can_bitrate: 500000
+motor_1_id: 1
+motor_2_id: 2
+
+# /*
+# ROBOT ORIENTATION
+#          FRONT
+#     MOTOR1  MOTOR2  (2WD/ACKERMANN)
+#     MOTOR3  MOTOR4  (4WD/MECANUM)
+#          BACK
+# */
+
+
+wheels_x_distance: 0.0
+wheels_y_distance: 0.49
+wheel_diameter: 0.2
+max_motor_rpm: 3000
+gear_ratio: 20.00
+total_wheels: 2.0  #currently support diff_drive control only
+
+publish_tf: True
+base_frame: "base_link"
+odom_frame: "odom"
+
